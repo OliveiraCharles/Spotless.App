@@ -6,7 +6,7 @@ interface ServiceProviderCardProps {
   service: string;
   description: string;
   phone: string;
-  adress: string;
+  address: string;
   price: number;
   date?: string;
   isDate?: boolean;
@@ -19,7 +19,7 @@ const ServiceProviderCard: React.FC<ServiceProviderCardProps> = ({
   service,
   description,
   phone,
-  adress,
+  address,
   price,
   date,
   isDate = false,
@@ -56,7 +56,7 @@ const ServiceProviderCard: React.FC<ServiceProviderCardProps> = ({
         <HStack space={15}>
           <Box>
             <Heading>Telefone: {phone}</Heading>
-            <Heading>Endereço: {adress}</Heading>
+            <Heading>Endereço: {address}</Heading>
             <Heading>
               Preço da visita: <Heading color={"#4BA105"}>R${price},00</Heading>
             </Heading>

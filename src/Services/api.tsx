@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Adress, ServiceProvider, User } from "../Types";
+import { Address, ServiceProvider, User } from "../Types";
 
 const baseURL = "http://localhost";
 const basePort = "5264";
@@ -156,7 +156,7 @@ export async function getAddressByID(id: number) {
   }
 }
 
-export async function postAddress(data: Adress) {
+export async function postAddress(data: Address) {
   try {
     const response = axios.post(`/api/Addresses`, data, {
       baseURL: `${baseURL}:${basePort}`,
@@ -167,7 +167,7 @@ export async function postAddress(data: Adress) {
   }
 }
 
-export async function putAddress(data: Adress) {
+export async function putAddress(data: Address) {
   try {
     const response = axios.put(`/api/Addresses`, data, {
       baseURL: `${baseURL}:${basePort}`,

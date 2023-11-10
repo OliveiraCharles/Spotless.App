@@ -99,7 +99,7 @@ export const schedule = [
     serviceType: "Serviços gerais",
     phone: "(15) 9999-9999",
     description: "Concerto de maquinas de lavar",
-    adress: "Rua Margaridas",
+    address: "Rua Margaridas",
     price:50,
     date: "2023-06-10"
   },

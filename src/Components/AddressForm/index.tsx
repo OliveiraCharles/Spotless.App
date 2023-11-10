@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import BackButton from "../../Components/BackButton";
 import ButtonCustom from "../../Components/Button";
 import Header from "../../Components/Header";
-import { Adress, ServiceProvider, User } from "../../Types";
+import { Address, ServiceProvider, User } from "../../Types";
 
 interface LocationFormProps {
   setMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -28,13 +28,13 @@ const LocationForm: React.FC<LocationFormProps> = ({
   onPress
 }) => {
   const navigation = useNavigation();
-  const [adress, setAdress] = useState<Adress>({});
-  const handleAdressinputChange = (field: keyof Adress) => (value: string) => {
-    setAdress((prevAdress) => ({
-      ...prevAdress,
+  const [address, setAddress] = useState<Address>({});
+  const handleAddressinputChange = (field: keyof Address) => (value: string) => {
+    setAddress((prevAddress) => ({
+      ...prevAddress,
       [field]: value,
     }));
-    setUser((prevState) => ({ ...prevState, adress: adress }));
+    setUser((prevState) => ({ ...prevState, address: address }));
   };
   return (
     <>
@@ -55,7 +55,7 @@ const LocationForm: React.FC<LocationFormProps> = ({
               _focus={{ bg: "#FFFFFF" }}
               rounded={"md"}
               fontSize={20}
-              onChangeText={handleAdressinputChange("state")}
+              onChangeText={handleAddressinputChange("state")}
             />
             <Input
               w={"100%"}
@@ -64,7 +64,7 @@ const LocationForm: React.FC<LocationFormProps> = ({
               _focus={{ bg: "#FFFFFF" }}
               rounded={"md"}
               fontSize={20}
-              onChangeText={handleAdressinputChange("city")}
+              onChangeText={handleAddressinputChange("city")}
             />
             <HStack space={"10%"}>
               <Input
@@ -74,7 +74,7 @@ const LocationForm: React.FC<LocationFormProps> = ({
                 _focus={{ bg: "#FFFFFF" }}
                 rounded={"md"}
                 fontSize={20}
-                onChangeText={handleAdressinputChange("street")}
+                onChangeText={handleAddressinputChange("street")}
               />
               <Input
                 w={"25%"}
@@ -83,7 +83,7 @@ const LocationForm: React.FC<LocationFormProps> = ({
                 _focus={{ bg: "#FFFFFF" }}
                 rounded={"md"}
                 fontSize={20}
-                onChangeText={handleAdressinputChange("houseNumber")}
+                onChangeText={handleAddressinputChange("houseNumber")}
               />
             </HStack>
             <Input
@@ -93,7 +93,7 @@ const LocationForm: React.FC<LocationFormProps> = ({
               _focus={{ bg: "#FFFFFF" }}
               rounded={"md"}
               fontSize={20}
-              onChangeText={handleAdressinputChange("additionalObservation")}
+              onChangeText={handleAddressinputChange("additionalObservation")}
             />
             <ButtonCustom
               label={"Cadastrar"}

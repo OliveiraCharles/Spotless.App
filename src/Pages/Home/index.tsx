@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useDispatch } from "react-redux";
 import SearchBar from "../../Components/SeachComponent/SearchBar";
 import ServiceCard from "../../Components/ServiceCard";
-import { setFilter } from "../../Store";
+import { setFilter } from "../../Store/filterSlice";
 
 const Home: React.FC = () => {
   const navigation = useNavigation();

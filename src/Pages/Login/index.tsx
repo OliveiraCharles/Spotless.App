@@ -8,7 +8,7 @@ import { useNavigation } from "@react-navigation/native";
 import { UserLogin } from "../../Types";
 import { handleChange, handleLogin } from "../../Utils/Index";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../Store";
+import { login } from "../../Store/userSlice";
 
 const Login: React.FC = () => {
   const navigation = useNavigation();

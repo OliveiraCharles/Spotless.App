@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Dimensions } from "react-native";
 import ServiceProviderCard from "../../Components/ServiceProviderCard";
 import { useSelector, useDispatch } from "react-redux";
-import { removeOrder } from "../../Store";
+import { removeOrder } from "../../Store/orderSlice";
 
 const Order: React.FC = () => {
   const mounths = [
@@ -42,7 +42,7 @@ const Order: React.FC = () => {
                   service={item.serviceType}
                   phone={item.phone}
                   description={item.description}
-                  adress={item.adress}
+                  address={item.address}
                   price={item.price}
                   isDate
                   isCancelOrder

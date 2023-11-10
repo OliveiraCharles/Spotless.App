@@ -15,7 +15,7 @@ import BackButton from "../../Components/BackButton";
 import ButtonCustom from "../../Components/Button";
 import Header from "../../Components/Header";
 import InputCustom from "../../Components/Input/Index";
-import { addUser } from "../../Store";
+import { addUserAsync } from "../../Store/userSlice";
 import { User } from "../../Types";
 import {
   handleChange,

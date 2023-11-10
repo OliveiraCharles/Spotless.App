@@ -6,7 +6,8 @@ import Schedule from "../../Components/Schedule";
 import ServiceProviderCard from "../../Components/ServiceProviderCard";
 import { useSelector, useDispatch } from "react-redux";
 import { filterServices } from "../../Utils/Index";
-import { addOrder, setFilter } from "../../Store";
+import { setFilter } from "../../Store/filterSlice";
+import { addOrder } from "../../Store/orderSlice";
 import { useNavigation } from "@react-navigation/native";
 
 const Discovery: React.FC = () => {

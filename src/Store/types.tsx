@@ -1,5 +1,5 @@
 // types.ts
-interface User {
+export interface User {
 	name?: string;
 	email?: string;
 	password?: string;
@@ -24,10 +24,10 @@ interface Address {
 }
 
 interface UserLogin {
-  name: string;
-  pass: string;
+	name: string;
+	pass: string;
 }
 
-export { User, Address, ServiceProvider, UserLogin };
+export { Address, ServiceProvider, UserLogin };
 
 // Outros tipos, se necessário
