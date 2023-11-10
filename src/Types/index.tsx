@@ -1,6 +1,9 @@
 // types.ts
+
 interface User {
+	uid?: string;
 	name?: string;
+	displayName?: string;
 	email?: string;
 	password?: string;
 	address?: Address;
@@ -24,8 +27,10 @@ interface Address {
 }
 
 interface UserLogin {
-  name: string;
-  pass: string;
+	uid?: string;
+	password?: string;
+	displayName?: string;
+	email?: string;
 }
 
 export { User, Address, ServiceProvider, UserLogin };

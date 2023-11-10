@@ -18,7 +18,7 @@ export const handleLogin = (userLogin: UserLogin) => {
   let isValidUser = false;
 
   usersRegisters.forEach((register) => {
-    if (userLogin.name === register.name && userLogin.pass === register.pass) {
+    if (userLogin.name === register.name && userLogin.password === register.pass) {
       isValidUser = true;
       return; // Interrompe o loop, pois um registro válido foi encontrado
     }

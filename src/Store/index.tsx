@@ -6,17 +6,16 @@ import orderReducer from "./orderSlice";
 import thunk from "redux-thunk";
 
 const store = configureStore({
-  reducer: {
-    user: userReducer,
-    filter: filterReducer,
-    order: orderReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(thunk),
+	reducer: {
+		user: userReducer,
+		filter: filterReducer,
+		order: orderReducer,
+	},
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
 
-export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
 
 export { userReducer, filterReducer, orderReducer };
 export default store;

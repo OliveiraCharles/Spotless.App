@@ -1,11 +1,11 @@
 export const usersRegisters = [
   {
     name: "Davi",
-    pass: "teste",
+    password: "teste",
   },
   {
     name: "Augusto",
-    pass: "teste2",
+    password: "teste2",
   },
 ];
 
